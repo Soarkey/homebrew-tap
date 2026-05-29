@@ -25,7 +25,7 @@ class Worktime < Formula
 
   def caveats
     <<~EOS
-macOS 上下班时间监测菜单栏工具。通过解析 `pmset -g log` 系统日志，自动识别上下班时间，在菜单栏实时显示状态，并在到点下班时发送通知提醒。
+worktime 安装成功! macOS 上下班时间监测菜单栏工具。通过解析 `pmset -g log` 系统日志，自动识别上下班时间，在菜单栏实时显示状态，并在到点下班时发送通知提醒。
     EOS
   end
 
