@@ -10,6 +10,7 @@ class Worktime < Formula
   depends_on :macos
 
   def install
+    ENV["GOPROXY"] = "https://goproxy.cn,direct"
     ldflags = "-s -w -X main.version=#{version}"
     system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/worktime"
   end
