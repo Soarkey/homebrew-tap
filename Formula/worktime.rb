@@ -4,7 +4,7 @@ class Worktime < Formula
   url "https://github.com/Soarkey/worktime/archive/refs/tags/v0.1.0.tar.gz"
   sha256 "3cc99b128b997eae06b64462c5193b54d04236b81f6bd7adeeabdfc8c1566e41"
   license "MIT"
-  head "https://github.com/Soarkey/worktime.git", branch: "master"
+  head "https://github.com/Soarkey/worktime.git", branch: "main"
 
   depends_on "go" => :build
   depends_on :macos
@@ -15,16 +15,17 @@ class Worktime < Formula
     system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/worktime"
   end
 
+  def post_install
+    system bin/"worktime", "install"
+  end
+
+  def pre_uninstall
+    system bin/"worktime", "uninstall"
+  end
+
   def caveats
     <<~EOS
-      启动后台服务:
-        worktime daemon
-
-      安装开机自启:
-        worktime install
-
-      查看状态:
-        worktime status
+macOS 上下班时间监测菜单栏工具。通过解析 `pmset -g log` 系统日志，自动识别上下班时间，在菜单栏实时显示状态，并在到点下班时发送通知提醒。
     EOS
   end
 
