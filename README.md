@@ -9,6 +9,13 @@ brew tap Soarkey/tap https://github.com/Soarkey/homebrew-tap
 brew install worktime
 ```
 
+## 使用
+
+```bash
+brew services start worktime   # 启动后台服务（开机自启）
+brew services stop worktime    # 停止后台服务
+```
+
 ## 更新
 
 ```bash
