@@ -1,8 +1,8 @@
 class Worktime < Formula
   desc "macOS 上下班时间监测菜单栏工具，通过 pmset 日志识别上下班时间"
   homepage "https://github.com/Soarkey/worktime"
-  url "https://github.com/Soarkey/worktime/releases/download/v0.1.3/worktime_0.1.3_darwin_arm64.tar.gz"
-  sha256 "06154271cc6456039c3236940a56e601f6327c18c7d7d5acb7ad2256c4334fc8"
+  url "https://github.com/Soarkey/worktime/releases/download/v0.1.4/worktime_0.1.4_darwin_arm64.tar.gz"
+  sha256 "4da8d00c814958779f89e34bbb5c1a766f45b4ff257fec27bd9395befa85f77e"
   license "MIT"
 
   depends_on :macos
