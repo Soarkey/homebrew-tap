@@ -4,7 +4,6 @@ class Worktime < Formula
   url "https://github.com/Soarkey/worktime/releases/download/v0.1.4/worktime_0.1.4_darwin_arm64.tar.gz"
   version "0.1.4"
   sha256 "4da8d00c814958779f89e34bbb5c1a766f45b4ff257fec27bd9395befa85f77e"
-  license "MIT"
 
   def install
     bin.install "worktime"

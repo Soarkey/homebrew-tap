@@ -18,10 +18,12 @@ brew upgrade worktime
 
 ## 发版维护
 
-发布新 tag 后，更新 Formula 中的 `url` 和 `sha256`：
+发布新 tag 后，更新 Formula 中的 `url`、`version`、`sha256` 三个字段：
 
 ```bash
-curl -sL https://github.com/Soarkey/worktime/archive/refs/tags/v<VERSION>.tar.gz | shasum -a 256
+VERSION=<VERSION>
+# 计算 sha256
+curl -sL "https://github.com/Soarkey/worktime/releases/download/v${VERSION}/worktime_${VERSION}_darwin_arm64.tar.gz" | shasum -a 256
 ```
 
-将输出的 hash 填入 `Formula/worktime.rb` 的 `sha256` 字段。
+将输出的值填入 `Formula/worktime.rb` 对应字段。
